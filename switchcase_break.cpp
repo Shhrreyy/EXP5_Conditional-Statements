@@ -2,38 +2,35 @@
 using namespace std;
 
 int main() {
-    char op;
-    double num1, num2;
+    int day;
 
-    cout << "Enter operator (+, -, *, /): ";
-    cin >> op;
+    cout << "Enter a number (1 to 7) to get the weekday: ";
+    cin >> day;
 
-    cout << "Enter two numbers: ";
-    cin >> num1 >> num2;
-
-    switch(op) {
-        case '+':
-            cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+    switch(day) {
+        case 1:
+            cout << "Monday" << endl;
             break;
-
-        case '-':
-            cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+        case 2:
+            cout << "Tuesday" << endl;
             break;
-
-        case '*':
-            cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+        case 3:
+            cout << "Wednesday" << endl;
             break;
-
-        case '/':
-            if(num2 != 0)
-                cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
-            else
-                cout << "Error! Division by zero." << endl;
+        case 4:
+            cout << "Thursday" << endl;
             break;
-
+        case 5:
+            cout << "Friday" << endl;
+            break;
+        case 6:
+            cout << "Saturday" << endl;
+            break;
+        case 7:
+            cout << "Sunday" << endl;
+            break;
         default:
-            cout << "Invalid operator!" << endl;
-            break;
+            cout << "Invalid input! Please enter a number between 1 and 7." << endl;
     }
 
     return 0;
